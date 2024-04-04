@@ -1,15 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-//package NewJComponents;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *
  * @author nicol
  */
-import javax.swing.*;
-import java.awt.*;
 
 public class Key extends JButton {
 
@@ -17,17 +12,13 @@ public class Key extends JButton {
     private static final int ROTATION = 30;
     private Color borderColor = Color.BLACK;
     
-    private String letter;
-    private javax.swing.JTextArea textArea;
     private String text = "";
 
     public Key(String letter, JTextArea textArea, int fontSize) {
-        this.letter = letter;
-        this.textArea = textArea;
         Font police = new Font("Arial", Font.PLAIN, fontSize);
         setFont(police);
         setText(letter);
-        setContentAreaFilled(false); // Supprimer la forme du JButton
+        setContentAreaFilled(false);
         
         addActionListener(new java.awt.event.ActionListener() {
             @Override

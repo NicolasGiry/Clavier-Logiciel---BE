@@ -1,24 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-//package JComponents;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.Image;
 import java.awt.Insets;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.ImageIcon;
-
 
 /**
  *
- * @author nicol
+ * @author Nicolas GIRY
  */
 public class ClavierFrame extends javax.swing.JFrame {
     
@@ -41,11 +32,7 @@ public class ClavierFrame extends javax.swing.JFrame {
         (int) (3 * keyHeight), 4 * keyHeight, (int) (4.5 * keyHeight), 5 * keyHeight, (int) (4.5 * keyHeight), 4 * keyHeight,
         keyHeight, keyHeight / 2, keyHeight / 2, keyHeight, 5 * keyHeight, (int) (5.5 * keyHeight), (int) (5.5 * keyHeight),
         5 * keyHeight,(int) (3.5 * keyHeight), (int) (2.5 * keyHeight), (int) (2.5 * keyHeight), (int) (3.5 * keyHeight), (int) (3 * keyHeight), (int) (1.5*keyHeight)};
-       
-
-    /**
-     * Creates new form NewJFrame
-     */
+     
     public ClavierFrame() {
         initSelfComponents();
         setSize(1000, 700);
@@ -77,6 +64,7 @@ public class ClavierFrame extends javax.swing.JFrame {
             constraints.gridx = x[i];
             constraints.gridy = y[i];
             constraints.insets = new Insets(0,0,(int) -(keyHeight/2 +3), (int) -(keyWidth/10 +3));
+
             if (i<=5) {
                 ((Key) keys[i]).changeBorderColor(Color.DARK_GRAY);
             } else if (i<=17) {
@@ -150,8 +138,7 @@ public class ClavierFrame extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
+    // Variables declaration 
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton[] keys;
